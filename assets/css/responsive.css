@@ -48,6 +48,10 @@
     .mobile-category {
         display: block;
     }
+
+    .page-product-switch__btn:hover {
+        color: #939393;
+    }
 }
 
 /* Tablet */
