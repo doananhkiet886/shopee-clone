@@ -1,0 +1,209 @@
+:root {
+    --header-height-on-tablet: 67px;
+    --header-height-on-mobile: 56px;
+    --page-control-height-on-tablet-mobile: 46px;
+}
+
+@media (min-width: 1024px) {
+    .page-control-on-tablet-mobile {
+        display: none;
+    }
+}
+
+/* Tablet and mobile */
+@media (max-width: 1023px) {
+    .hide-on-tablet-mobile {
+        display: none;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+
+    .header__cart-drop-down {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        padding: 0 calc((100% - 644px) / 2 - 10px);
+        animation: cartDropDownFadeInOnTabletMobile 0.2s linear;
+    }
+
+    .header__cart-drop-down::before {
+        display: none;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .container__content {
+        padding-top: 10px; 
+    }
+
+    .mobile-category {
+        display: block;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+
+    .header {
+        height: var(--header-height-on-tablet);
+    }
+    
+    .header__logo-search-cart-wrap {
+        padding: 12px 0;
+    }
+
+    .header__cart-wrap {
+        width: 80px;
+        text-align: end;
+    }
+
+    .header__cart-drop-down {
+        top: var(--header-height-on-tablet);
+    }
+
+    .container {
+        margin-top: calc(var(--header-height-on-tablet) + var(--page-control-height-on-tablet-mobile));
+    }
+
+    .page-control-on-tablet-mobile {
+        top: var(--header-height-on-tablet);        
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .header {
+        height: var(--header-height-on-mobile);
+        display: flex;
+        align-items: center;
+    }
+
+    .header__logo-search-cart-wrap {
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .header__mobile-search {
+        display: flex;
+    }
+
+    .header__logo-wrap {
+        width: auto;
+    }
+
+    .header__logo-img {
+        width: 114px;
+    }
+
+    .header__search-wrap {
+        position: fixed;
+        top: var(--header-height-on-mobile);
+        left: 0;
+        right: 0;
+        z-index: 2;
+        animation: searchWrapFadeInOnMobile 0.5s ease;
+        will-change: opacity;
+        transform-origin: top left;
+        display: none;
+    }
+
+    .header__search-history {
+        width: 100%;
+    }
+
+    .header__cart-wrap {
+        width: 54px;
+        height: var(--header-height-on-mobile);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: unset;
+        padding-right: 8px;
+    }
+
+    .header__cart-icon-wrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__cart-number {
+        top: 3px;
+        right: -3px;
+    }
+
+    .header__cart-drop-down {
+        top: var(--header-height-on-mobile);
+    }
+
+    .container {
+        margin-top: calc(var(--header-height-on-mobile) + var(--page-control-height-on-tablet-mobile));
+    }
+
+    .page-control-on-tablet-mobile {
+        top: var(--header-height-on-mobile);        
+    }
+
+    .footer-info__heading,
+    .footer-info__item {
+        text-align: center;
+    }
+
+    .footer-info-item__link {
+        display: block;
+    }
+
+    .footer-info__download-app {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-info-item-link__img {
+        width: 124px;
+        padding: 12px;
+    }
+
+    .footer-info-item__download-qr-img {
+        width: 100px;
+    }
+}
+
+@keyframes cartDropDownFadeInOnTabletMobile {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes searchWrapFadeInOnMobile {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
