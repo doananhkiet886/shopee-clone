@@ -76,21 +76,19 @@ html {
 }
 
 .btn {
+    min-width: 36px;
     text-decoration: none;
     border: none;
-    outline: none;
-    padding: 10px 16px;
     border-radius: 2px;
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 1.5rem;
-    text-transform: capitalize;
+    font-size: 1.6rem;
+    padding: 9px 12px;
+    outline: none;
     cursor: pointer;
     color: var(--text-color);
-    background-color: #eee;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    line-height: 1.6rem;
 }
 
 .btn.btn--primary {

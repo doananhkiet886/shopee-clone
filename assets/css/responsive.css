@@ -133,7 +133,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        position: unset;
+        position: relative;
         padding-right: 8px;
     }
 
@@ -160,6 +160,14 @@
 
     .page-control-on-tablet-mobile {
         top: var(--header-height-on-mobile);        
+    }
+
+    .page-product-switch__btn {
+        padding: 12px 16px 11px;
+    }
+
+    .page-product-switch__btn + .page-product-switch__btn {
+        margin-left: 0;
     }
 
     .footer-info__heading,
